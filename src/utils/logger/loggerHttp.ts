@@ -1,6 +1,7 @@
 import expressWinston from "express-winston";
-import winston from "winston";
+import * as winston from "winston";
 import { envs } from "../../config/envs";
+import "winston-daily-rotate-file";
 function transportsDynamic() {
   const transportsArr: any = [];
   if (envs.ENVIRONMENT === "development" || envs.LOG_CONSOLE === true) {
@@ -20,9 +21,12 @@ function transportsDynamic() {
       })
     );
   }
+
   transportsArr.push(
-    new winston.transports.File({
-      filename: "logs/app.log",
+    new winston.transports.DailyRotateFile({
+      filename: "logs/app-%DATE%.log",
+      datePattern: "YYYY-MM-DD",
+      maxFiles: "14d",
       format: winston.format.combine(
         winston.format.timestamp({ format: "MM-DD-YYYY HH:mm:ss" }),
         winston.format.json({})
