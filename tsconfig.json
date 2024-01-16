@@ -9,38 +9,35 @@
     "declaration": true,
     "strict": true,
 
-    /* Basic Options */
     "incremental": true,
 
-    /* Strict Type-Checking Options */
     "noImplicitAny": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
+    "strictPropertyInitialization": false,
     "noImplicitThis": true,
     "alwaysStrict": true,
 
-    /* Additional Checks */
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
 
-    /* Module Resolution Options */
     "baseUrl": ".",
 
-    /* Experimental Options */
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
 
-    /* Advanced Options */
     "forceConsistentCasingInFileNames": true,
 
     "resolveJsonModule": true,
     "paths": {
       "@/*": ["./src/*"]
     }
+  },
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
   },
   "include": ["src", "__test__"]
 }

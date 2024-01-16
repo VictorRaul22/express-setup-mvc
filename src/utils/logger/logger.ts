@@ -1,6 +1,6 @@
 import * as winston from "winston";
 
-import { envs } from "../../config/envs";
+import { envs } from "@/config/envs";
 import "winston-daily-rotate-file";
 const { combine, timestamp, colorize } = winston.format;
 

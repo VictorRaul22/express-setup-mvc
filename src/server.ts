@@ -9,8 +9,8 @@ import { type Server as HttpServer } from "http";
 import cors from "cors";
 import httpStatus from "http-status";
 
-import { loggerHttpMiddleware } from "./utils/logger/loggerHttp";
-import { logger } from "./utils/logger/logger";
+import { loggerHttpMiddleware } from "@/utils/logger/loggerHttp";
+import { logger } from "@/utils/logger/logger";
 // import { loggerHttpMiddleware } from "./utils/logger/loggerHttp";
 // import { loggerHttpMiddleware } from "./utils/logger/loggerHttp";
 export class Server {

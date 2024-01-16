@@ -1,4 +1,5 @@
-import { BackendApp } from "./BackendApp";
+// import('module-alias/register')
+import { BackendApp } from "@/BackendApp";
 async function main(): Promise<void> {
   const app = new BackendApp();
   await app.start();

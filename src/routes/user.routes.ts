@@ -1,9 +1,10 @@
+import { UserController } from "@/controller/user.controller";
+import { UserService } from "@/services/user.service";
 import express, { type Router } from "express";
 const router: Router = express.Router();
-router.get("/", (_req, res) => {
-  res.json({ test: "hello word" });
-});
-router.get("/test", (_req, res) => {
-  res.json({ test: "test logger" });
-});
+
+const userService = new UserService();
+const userController = new UserController(userService);
+
+router.get("/", userController.get);
 export { router as userRouter };

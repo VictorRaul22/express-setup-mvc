@@ -1,6 +1,6 @@
 import expressWinston from "express-winston";
 import * as winston from "winston";
-import { envs } from "../../config/envs";
+import { envs } from "@/config/envs";
 import "winston-daily-rotate-file";
 function transportsDynamic() {
   const transportsArr: any = [];
