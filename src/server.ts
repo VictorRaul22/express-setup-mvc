@@ -20,6 +20,11 @@ export class Server {
   constructor(port: string) {
     this.port = port;
     this.express = express();
+    this.express.use(
+      express.urlencoded({
+        extended: true,
+      })
+    );
     this.express.use(express.json());
     this.express.use(express.urlencoded({ extended: true }));
     this.express.use(cors());
