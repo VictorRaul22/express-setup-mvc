@@ -7,4 +7,5 @@ const userService = new UserService();
 const userController = new UserController(userService);
 
 router.get("/", userController.get);
+
 export { router as userRouter };
