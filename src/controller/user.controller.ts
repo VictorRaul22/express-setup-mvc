@@ -10,9 +10,7 @@ export class UserController {
     (_req: Request, res: Response, next: NextFunction) => {
       this.userService
         .list()
-        .then((data) => {
-          response.success(res, data);
-        })
+        .then((data) => response.success(res, data))
         .catch((err) => {
           next(err);
         });
@@ -23,13 +21,12 @@ export class UserController {
     const result = validationResult(req);
     if (!result.isEmpty()) {
       response.error(res, 400, result.mapped());
+      return;
     }
     const { id } = req.params;
     this.userService
       .findById(id)
-      .then((data) => {
-        response.success(res, data);
-      })
+      .then((data) => response.success(res, data))
       .catch((err) => {
         next(err);
       });

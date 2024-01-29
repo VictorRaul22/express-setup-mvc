@@ -1,7 +1,7 @@
 {
   "name": "express-mvc",
   "version": "1.0.0",
-  "description": "",
+  "description": "Configuración inicial de un proyecto express",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,8 +12,13 @@
   "_moduleAliases": {
     "@": "dist"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "express",
+    "typescript",
+    "winston",
+    "eslint"
+  ],
+  "author": "Victor Chirinos",
   "license": "MIT",
   "devDependencies": {
     "@types/cors": "^2.8.17",

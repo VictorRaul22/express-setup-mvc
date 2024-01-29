@@ -9,8 +9,8 @@ export const errorMiddleware = (
   _next: NextFunction
 ) => {
   if (err instanceof AppError) {
-    response.error(res, err.status, err.message);
+    return response.error(res, err.status, err.message);
   } else {
-    response.error(res);
+    return response.error(res);
   }
 };
