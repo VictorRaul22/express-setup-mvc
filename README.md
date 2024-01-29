@@ -20,8 +20,8 @@
 
 ## 🚀 Inicio rapido
 
-1. [Fork](https://github.com/VictorRaul22/express-setup-mvc/fork) or clone this
-   repository.
+1. Puedes hacer un [Fork](https://github.com/VictorRaul22/express-setup-mvc/fork) o clonar
+   este repositorio.
 
 ```bash
 git clone git@github.com:VictorRaul22/express-setup-mvc.git
